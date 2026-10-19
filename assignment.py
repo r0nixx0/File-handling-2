@@ -55,8 +55,8 @@ def replace_word(filename, old_word, new_word):
     file.close()
     return count
     pass
-replace_word("scratch.txt","cats","dogs")
-# Exercise 5    
+
+# Exercise 5
 def remove_line(filename, line_number):
     # Write your code here
     pass
