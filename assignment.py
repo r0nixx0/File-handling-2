@@ -25,23 +25,21 @@ def average_score(filename):
 
 # Exercise 3
 def filter_passed(source, destination, pass_mark):
-    file=open(source,"r")
-    lines = file.readlines()
-    file.close()
-    file=open(destination,"w")
-    passed_count=0
-    for line in lines:
-        line=line.strip()
-        if line=="":
-            continue
-        parts=line.split(",")
-        if int(parts[1])>=pass_mark:
-            passed_count+=1
-            file.write(line+"\n")
-            passed_count += 1
-    file.close()
-    return passed_count
-    pass
+  file=open(source, "r")
+  lines=file.readlines()
+  file.close()
+  file=open(destination, "w")
+  passed_count = 0
+  for line in lines:
+    stripped=line.strip()
+    if stripped=="":
+      continue
+    parts=stripped.split(",")
+    if int(parts[1])>=pass_mark:
+      passed_count+=1
+      file.write(stripped+"\n")
+  file.close()
+  return passed_count
 
 # Exercise 4
 def replace_word(filename, old_word, new_word):
